@@ -1,0 +1,62 @@
+.loader_img {
+    height: 100%;
+    width: 100%;
+    animation: load 5s infinite;
+}
+
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 30px;
+}
+
+.animsition-loading-2 {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@keyframes load {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .home__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .img-grid {
+        width: 90vw;
+        margin-left: -40px;
+    }
+    .title__text__contact {
+        font-size: 2.5rem;
+    }
+    address {
+        font-size: 1.3rem;
+    }
+    [data-anchor='Contact'] .tel {
+        font-size: 1.4rem;
+    }
+}
